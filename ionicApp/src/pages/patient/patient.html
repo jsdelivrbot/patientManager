@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar transparent>
+   <ion-title>Add Patient</ion-title>
+  </ion-toolbar>
+ </ion-header>
+
+ <ion-content>
+    <form (ngSubmit)="addPatient(patientName,areacode,telnumber)">
+        <ion-item>
+            <ion-label floating>Name</ion-label>
+            <ion-input [(ngModel)]="patientName" type="text" name="patientName"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Area Code</ion-label>
+            <ion-input [(ngModel)]="areacode" type="number" name="areacode"></ion-input>
+          </ion-item>
+
+          <ion-item>
+           <ion-label floating>Tel Number</ion-label>
+           <ion-input [(ngModel)]="telnumber" type="text" name="telnumber"></ion-input>
+         </ion-item>
+        <button ion-button type="submit" block>Save</button>
+      </form>
+
+ </ion-content>
